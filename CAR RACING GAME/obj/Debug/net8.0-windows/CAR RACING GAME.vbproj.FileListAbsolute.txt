@@ -1,10 +1,11 @@
+D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR_RACING_GAME.Form1.resources
+D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR RACING GAME.vbproj.GenerateResource.cache
 D:\14674\VB\CAR RACING GAME\bin\Debug\net8.0-windows\CAR RACING GAME.exe
 D:\14674\VB\CAR RACING GAME\bin\Debug\net8.0-windows\CAR RACING GAME.deps.json
 D:\14674\VB\CAR RACING GAME\bin\Debug\net8.0-windows\CAR RACING GAME.runtimeconfig.json
 D:\14674\VB\CAR RACING GAME\bin\Debug\net8.0-windows\CAR RACING GAME.dll
 D:\14674\VB\CAR RACING GAME\bin\Debug\net8.0-windows\CAR RACING GAME.pdb
-D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR_RACING_GAME.Form1.resources
-D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR RACING GAME.vbproj.GenerateResource.cache
+D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR_RACING_GAME.Resources.resources
 D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR RACING GAME.GeneratedMSBuildEditorConfig.editorconfig
 D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR RACING GAME.AssemblyInfoInputs.cache
 D:\14674\VB\CAR RACING GAME\obj\Debug\net8.0-windows\CAR RACING GAME.AssemblyInfo.vb
