@@ -5,6 +5,8 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+        Me.KeyPreview = True
+
         RoadMover.Stop()
         RaceMover1.Stop()
         RaceMover2.Stop()
@@ -74,6 +76,14 @@
         If e.KeyCode = Keys.Left Then
             LeftSide.Start()
         End If
+
+        If e.KeyCode = Keys.Up Then
+            UpSide.Start()
+        End If
+
+        If e.KeyCode = Keys.Down Then
+            DownSide.Start()
+        End If
     End Sub
 
     Private Sub RightSide_Tick(sender As Object, e As EventArgs) Handles RightSide.Tick
@@ -87,10 +97,34 @@
             car.Left -= 5
         End If
     End Sub
+    Private Sub UpSide_Tick(sender As Object, e As EventArgs) Handles UpSide.Tick
+        If (car.Location.Y > 0) Then
+            car.Top -= 5
+        End If
+    End Sub
+
+    Private Sub DownSide_Tick(sender As Object, e As EventArgs) Handles DownSide.Tick
+        If (car.Location.Y < 500) Then
+            car.Top += 5
+        End If
+    End Sub
 
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles MyBase.KeyUp
-        RightSide.Stop()
-        LeftSide.Stop()
+        If e.KeyCode = Keys.Right Then
+            RightSide.Stop()
+        End If
+
+        If e.KeyCode = Keys.Left Then
+            LeftSide.Stop()
+        End If
+
+        If e.KeyCode = Keys.Up Then
+            UpSide.Stop()
+        End If
+
+        If e.KeyCode = Keys.Down Then
+            DownSide.Stop()
+        End If
     End Sub
 
     Private Sub RaceMover1_Tick(sender As Object, e As EventArgs) Handles RaceMover1.Tick
@@ -141,4 +175,5 @@
         RaceMover2.Start()
         RaceMover3.Start()
     End Sub
+
 End Class

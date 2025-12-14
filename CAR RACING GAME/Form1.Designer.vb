@@ -46,6 +46,8 @@ Partial Class Form1
         Label3 = New Label()
         Button1 = New Button()
         Button2 = New Button()
+        UpSide = New Timer(components)
+        DownSide = New Timer(components)
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -135,24 +137,24 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Agency FB", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(12, 9)
+        Label1.Location = New Point(3, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(82, 31)
+        Label1.Size = New Size(82, 24)
         Label1.TabIndex = 8
-        Label1.Text = "SCORE 0"
+        Label1.Text = "Score 0"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Agency FB", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(243, 9)
+        Label2.Location = New Point(232, 9)
         Label2.Name = "Label2"
-        Label2.Size = New Size(79, 31)
+        Label2.Size = New Size(88, 24)
         Label2.TabIndex = 9
-        Label2.Text = "SPEED 0"
+        Label2.Text = "Speed 0"
         ' 
         ' race3
         ' 
@@ -226,11 +228,11 @@ Partial Class Form1
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.White
-        Label3.Font = New Font("Agency FB", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Firebrick
-        Label3.Location = New Point(84, 200)
+        Label3.Location = New Point(45, 190)
         Label3.Name = "Label3"
-        Label3.Size = New Size(158, 44)
+        Label3.Size = New Size(253, 42)
         Label3.TabIndex = 14
         Label3.Text = "GAME OVER"
         Label3.TextAlign = ContentAlignment.MiddleCenter
@@ -239,11 +241,11 @@ Partial Class Form1
         ' Button1
         ' 
         Button1.BackColor = Color.Firebrick
-        Button1.Font = New Font("Agency FB", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(107, 247)
+        Button1.Location = New Point(97, 235)
         Button1.Name = "Button1"
-        Button1.Size = New Size(119, 43)
+        Button1.Size = New Size(143, 43)
         Button1.TabIndex = 15
         Button1.Text = "REPLAY"
         Button1.TextAlign = ContentAlignment.TopCenter
@@ -253,15 +255,23 @@ Partial Class Form1
         ' Button2
         ' 
         Button2.BackColor = Color.OliveDrab
-        Button2.Font = New Font("Agency FB", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Font = New Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(232, 377)
+        Button2.Location = New Point(214, 394)
         Button2.Name = "Button2"
-        Button2.Size = New Size(93, 72)
+        Button2.Size = New Size(119, 55)
         Button2.TabIndex = 16
         Button2.Text = "START"
         Button2.UseVisualStyleBackColor = False
         Button2.Visible = False
+        ' 
+        ' UpSide
+        ' 
+        UpSide.Interval = 10
+        ' 
+        ' DownSide
+        ' 
+        DownSide.Interval = 10
         ' 
         ' Form1
         ' 
@@ -329,5 +339,7 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents UpSide As Timer
+    Friend WithEvents DownSide As Timer
 
 End Class
