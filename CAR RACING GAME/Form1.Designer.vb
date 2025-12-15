@@ -51,6 +51,7 @@ Partial Class Form1
         RaceMoverSide1 = New Timer(components)
         RaceMoverSide2 = New Timer(components)
         RaceMoverSide3 = New Timer(components)
+        HomemTimer = New Timer(components)
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -162,7 +163,7 @@ Partial Class Form1
         ' race3
         ' 
         race3.Image = My.Resources.Resources.greycar
-        race3.Location = New Point(268, 173)
+        race3.Location = New Point(279, 205)
         race3.Name = "race3"
         race3.Size = New Size(43, 90)
         race3.SizeMode = PictureBoxSizeMode.Zoom
@@ -182,7 +183,7 @@ Partial Class Form1
         ' race1
         ' 
         race1.Image = My.Resources.Resources.yellowcar
-        race1.Location = New Point(28, 258)
+        race1.Location = New Point(12, 258)
         race1.Name = "race1"
         race1.Size = New Size(57, 108)
         race1.SizeMode = PictureBoxSizeMode.Zoom
@@ -192,9 +193,9 @@ Partial Class Form1
         ' car
         ' 
         car.Image = My.Resources.Resources.bugatti1
-        car.Location = New Point(141, 356)
+        car.Location = New Point(141, 345)
         car.Name = "car"
-        car.Size = New Size(52, 106)
+        car.Size = New Size(46, 91)
         car.SizeMode = PictureBoxSizeMode.Zoom
         car.TabIndex = 13
         car.TabStop = False
@@ -290,6 +291,11 @@ Partial Class Form1
         RaceMoverSide3.Enabled = True
         RaceMoverSide3.Interval = 10
         ' 
+        ' HomemTimer
+        ' 
+        HomemTimer.Enabled = True
+        HomemTimer.Interval = 80
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -361,5 +367,6 @@ Partial Class Form1
     Friend WithEvents RaceMoverSide1 As Timer
     Friend WithEvents RaceMoverSide2 As Timer
     Friend WithEvents RaceMoverSide3 As Timer
+    Friend WithEvents HomemTimer As Timer
 
 End Class
