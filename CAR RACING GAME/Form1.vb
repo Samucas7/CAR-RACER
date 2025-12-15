@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Security.Authentication.ExtendedProtection
+
+Public Class Form1
     Dim speed As Integer
     Dim road(7) As PictureBox
     Dim score As Integer = 0
@@ -104,7 +106,7 @@
     End Sub
 
     Private Sub DownSide_Tick(sender As Object, e As EventArgs) Handles DownSide.Tick
-        If (car.Location.Y < 500) Then
+        If (car.Location.Y < 357) Then
             car.Top += 5
         End If
     End Sub
@@ -135,6 +137,7 @@
 
             race1.Top = -(CInt(Math.Ceiling(Rnd() * 200)) + race1.Height)
             race1.Left = CInt(Math.Ceiling(Rnd() * 50)) + 0
+
         End If
     End Sub
 
@@ -157,6 +160,160 @@
 
             race3.Top = -(CInt(Math.Ceiling(Rnd() * 200)) + race3.Height)
             race3.Left = CInt(Math.Ceiling(Rnd() * 120)) + 180
+        End If
+    End Sub
+
+    Private Sub RaceMoverSide1_Tick(sender As Object, e As EventArgs) Handles RaceMoverSide1.Tick
+        Dim mudardirecao As Boolean
+        Dim esquerda As Boolean
+
+        mudardirecao = True
+        esquerda = Rnd()
+
+        Dim i = 0
+
+        If mudardirecao = True Then
+
+            If esquerda = True Then
+
+                If race1.Top = CInt(Math.Ceiling(Rnd() * 300)) + 50 Then
+
+                    Do While i < 120
+
+                        If race1.Location.X > 0 Then
+                            race1.Left -= 1
+                        End If
+
+                        i += 1
+                    Loop
+
+                    i = 0
+
+                End If
+
+            End If
+
+            If esquerda = False Then
+
+                If race1.Top = CInt(Math.Ceiling(Rnd() * 300)) + 50 Then
+
+                    Do While i < 120
+
+                        If race1.Location.X < 283 Then
+                            race1.Left += 1
+                        End If
+
+                        i += 1
+                    Loop
+
+                    i = 0
+
+                End If
+
+            End If
+
+        End If
+    End Sub
+
+    Private Sub RaceMoverSide2_Tick(sender As Object, e As EventArgs) Handles RaceMoverSide2.Tick
+        Dim mudardirecao As Boolean
+        Dim esquerda As Boolean
+
+        mudardirecao = True
+        esquerda = False
+
+        Dim i = 0
+
+        If mudardirecao = True Then
+
+            If esquerda = True Then
+
+                If race2.Top = CInt(Math.Ceiling(Rnd() * 300)) + 50 Then
+
+                    Do While i < 120
+                        If race2.Location.X > 0 Then
+                            race2.Left -= 1
+                        End If
+
+                        i += 1
+                    Loop
+
+                    i = 0
+
+                End If
+
+            End If
+
+            If esquerda = False Then
+
+                If race2.Top = CInt(Math.Ceiling(Rnd() * 300)) + 50 Then
+
+                    Do While i < 120
+
+                        If race2.Location.X < 280 Then
+                            race2.Left += 1
+                        End If
+
+                        i += 1
+                    Loop
+
+                    i = 0
+
+                End If
+
+            End If
+
+        End If
+    End Sub
+
+    Private Sub RaceMoverSide3_Tick(sender As Object, e As EventArgs) Handles RaceMoverSide3.Tick
+        Dim mudardirecao As Boolean
+        Dim esquerda As Boolean
+
+        mudardirecao = True
+        esquerda = Rnd()
+
+        Dim i = 0
+
+        If mudardirecao = True Then
+
+            If esquerda = True Then
+
+                If race3.Top = CInt(Math.Ceiling(Rnd() * 300)) + 50 Then
+
+                    Do While i < 120
+                        If race3.Location.X > 0 Then
+                            race3.Left -= 1
+                        End If
+
+                        i += 1
+                    Loop
+
+                    i = 0
+
+                End If
+
+            End If
+
+            If esquerda = False Then
+
+                If race3.Top = CInt(Math.Ceiling(Rnd() * 300)) + 50 Then
+
+                    Do While i < 120
+
+                        If race3.Location.X < 290 Then
+                            race3.Left += 1
+                        End If
+
+                        i += 1
+                    Loop
+
+                    i = 0
+
+                End If
+
+            End If
+
         End If
     End Sub
 

@@ -48,6 +48,9 @@ Partial Class Form1
         Button2 = New Button()
         UpSide = New Timer(components)
         DownSide = New Timer(components)
+        RaceMoverSide1 = New Timer(components)
+        RaceMoverSide2 = New Timer(components)
+        RaceMoverSide3 = New Timer(components)
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -159,7 +162,7 @@ Partial Class Form1
         ' race3
         ' 
         race3.Image = My.Resources.Resources.greycar
-        race3.Location = New Point(24, 200)
+        race3.Location = New Point(268, 173)
         race3.Name = "race3"
         race3.Size = New Size(43, 90)
         race3.SizeMode = PictureBoxSizeMode.Zoom
@@ -169,7 +172,7 @@ Partial Class Form1
         ' race2
         ' 
         race2.Image = My.Resources.Resources.medik
-        race2.Location = New Point(141, 25)
+        race2.Location = New Point(141, 29)
         race2.Name = "race2"
         race2.Size = New Size(58, 124)
         race2.SizeMode = PictureBoxSizeMode.Zoom
@@ -179,7 +182,7 @@ Partial Class Form1
         ' race1
         ' 
         race1.Image = My.Resources.Resources.yellowcar
-        race1.Location = New Point(268, 163)
+        race1.Location = New Point(28, 258)
         race1.Name = "race1"
         race1.Size = New Size(57, 108)
         race1.SizeMode = PictureBoxSizeMode.Zoom
@@ -189,7 +192,7 @@ Partial Class Form1
         ' car
         ' 
         car.Image = My.Resources.Resources.bugatti1
-        car.Location = New Point(141, 328)
+        car.Location = New Point(141, 356)
         car.Name = "car"
         car.Size = New Size(52, 106)
         car.SizeMode = PictureBoxSizeMode.Zoom
@@ -273,6 +276,20 @@ Partial Class Form1
         ' 
         DownSide.Interval = 10
         ' 
+        ' RaceMoverSide1
+        ' 
+        RaceMoverSide1.Enabled = True
+        ' 
+        ' RaceMoverSide2
+        ' 
+        RaceMoverSide2.Enabled = True
+        RaceMoverSide2.Interval = 10
+        ' 
+        ' RaceMoverSide3
+        ' 
+        RaceMoverSide3.Enabled = True
+        RaceMoverSide3.Interval = 10
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -341,5 +358,8 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents UpSide As Timer
     Friend WithEvents DownSide As Timer
+    Friend WithEvents RaceMoverSide1 As Timer
+    Friend WithEvents RaceMoverSide2 As Timer
+    Friend WithEvents RaceMoverSide3 As Timer
 
 End Class
