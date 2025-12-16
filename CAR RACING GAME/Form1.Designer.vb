@@ -291,11 +291,6 @@ Partial Class Form1
         RaceMoverSide3.Enabled = True
         RaceMoverSide3.Interval = 10
         ' 
-        ' HomemTimer
-        ' 
-        HomemTimer.Enabled = True
-        HomemTimer.Interval = 80
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -367,6 +362,6 @@ Partial Class Form1
     Friend WithEvents RaceMoverSide1 As Timer
     Friend WithEvents RaceMoverSide2 As Timer
     Friend WithEvents RaceMoverSide3 As Timer
-    Friend WithEvents HomemTimer As Timer
 
 End Class
+
