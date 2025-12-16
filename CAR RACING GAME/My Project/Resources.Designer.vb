@@ -93,16 +93,6 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property homemAtropelar() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("homemAtropelar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property medik() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("medik", resourceCulture)
@@ -131,3 +121,4 @@ Namespace My.Resources
         End Property
     End Module
 End Namespace
+
